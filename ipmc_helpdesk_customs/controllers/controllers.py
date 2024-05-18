@@ -2,20 +2,20 @@
 # from odoo import http
 
 
-# class HelpDesk(http.Controller):
-#     @http.route('/help_desk/help_desk', auth='public')
+# class IpmcHelpdeskCustoms(http.Controller):
+#     @http.route('/ipmc_helpdesk_customs/ipmc_helpdesk_customs', auth='public')
 #     def index(self, **kw):
 #         return "Hello, world"
 
-#     @http.route('/help_desk/help_desk/objects', auth='public')
+#     @http.route('/ipmc_helpdesk_customs/ipmc_helpdesk_customs/objects', auth='public')
 #     def list(self, **kw):
-#         return http.request.render('help_desk.listing', {
-#             'root': '/help_desk/help_desk',
-#             'objects': http.request.env['help_desk.help_desk'].search([]),
+#         return http.request.render('ipmc_helpdesk_customs.listing', {
+#             'root': '/ipmc_helpdesk_customs/ipmc_helpdesk_customs',
+#             'objects': http.request.env['ipmc_helpdesk_customs.ipmc_helpdesk_customs'].search([]),
 #         })
 
-#     @http.route('/help_desk/help_desk/objects/<model("help_desk.help_desk"):obj>', auth='public')
+#     @http.route('/ipmc_helpdesk_customs/ipmc_helpdesk_customs/objects/<model("ipmc_helpdesk_customs.ipmc_helpdesk_customs"):obj>', auth='public')
 #     def object(self, obj, **kw):
-#         return http.request.render('help_desk.object', {
+#         return http.request.render('ipmc_helpdesk_customs.object', {
 #             'object': obj
 #         })

@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class help_desk(models.Model):
-#     _name = 'help_desk.help_desk'
-#     _description = 'help_desk.help_desk'
+# class ipmc_helpdesk_customs(models.Model):
+#     _name = 'ipmc_helpdesk_customs.ipmc_helpdesk_customs'
+#     _description = 'ipmc_helpdesk_customs.ipmc_helpdesk_customs'
 
 #     name = fields.Char()
 #     value = fields.Integer()

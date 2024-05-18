@@ -2,9 +2,9 @@
   <data>
     <!-- explicit list view definition -->
 <!--
-    <record model="ir.ui.view" id="help_desk.list">
-      <field name="name">help_desk list</field>
-      <field name="model">help_desk.help_desk</field>
+    <record model="ir.ui.view" id="ipmc_helpdesk_customs.list">
+      <field name="name">ipmc_helpdesk_customs list</field>
+      <field name="model">ipmc_helpdesk_customs.ipmc_helpdesk_customs</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -17,18 +17,18 @@
 
     <!-- actions opening views on models -->
 <!--
-    <record model="ir.actions.act_window" id="help_desk.action_window">
-      <field name="name">help_desk window</field>
-      <field name="res_model">help_desk.help_desk</field>
+    <record model="ir.actions.act_window" id="ipmc_helpdesk_customs.action_window">
+      <field name="name">ipmc_helpdesk_customs window</field>
+      <field name="res_model">ipmc_helpdesk_customs.ipmc_helpdesk_customs</field>
       <field name="view_mode">tree,form</field>
     </record>
 -->
 
     <!-- server action to the one above -->
 <!--
-    <record model="ir.actions.server" id="help_desk.action_server">
-      <field name="name">help_desk server</field>
-      <field name="model_id" ref="model_help_desk_help_desk"/>
+    <record model="ir.actions.server" id="ipmc_helpdesk_customs.action_server">
+      <field name="name">ipmc_helpdesk_customs server</field>
+      <field name="model_id" ref="model_ipmc_helpdesk_customs_ipmc_helpdesk_customs"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -42,19 +42,19 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="help_desk" id="help_desk.menu_root"/>
+    <menuitem name="ipmc_helpdesk_customs" id="ipmc_helpdesk_customs.menu_root"/>
 -->
     <!-- menu categories -->
 <!--
-    <menuitem name="Menu 1" id="help_desk.menu_1" parent="help_desk.menu_root"/>
-    <menuitem name="Menu 2" id="help_desk.menu_2" parent="help_desk.menu_root"/>
+    <menuitem name="Menu 1" id="ipmc_helpdesk_customs.menu_1" parent="ipmc_helpdesk_customs.menu_root"/>
+    <menuitem name="Menu 2" id="ipmc_helpdesk_customs.menu_2" parent="ipmc_helpdesk_customs.menu_root"/>
 -->
     <!-- actions -->
 <!--
-    <menuitem name="List" id="help_desk.menu_1_list" parent="help_desk.menu_1"
-              action="help_desk.action_window"/>
-    <menuitem name="Server to list" id="help_desk" parent="help_desk.menu_2"
-              action="help_desk.action_server"/>
+    <menuitem name="List" id="ipmc_helpdesk_customs.menu_1_list" parent="ipmc_helpdesk_customs.menu_1"
+              action="ipmc_helpdesk_customs.action_window"/>
+    <menuitem name="Server to list" id="ipmc_helpdesk_customs" parent="ipmc_helpdesk_customs.menu_2"
+              action="ipmc_helpdesk_customs.action_server"/>
 -->
   </data>
 </odoo>
