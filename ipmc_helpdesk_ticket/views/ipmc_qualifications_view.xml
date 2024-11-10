@@ -1,0 +1,16 @@
+<odoo>
+    <!-- Inherit the hr_recruitment_degree_tree view to add the certificate and name fields -->
+    <record id="view_hr_recruitment_degree_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.recruitment.degree.tree.inherit</field>
+        <field name="model">hr.recruitment.degree</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_recruitment_degree_tree"/>
+        <field name="arch" type="xml">
+            <!-- Locate where to add the fields -->
+            <xpath expr="//tree" position="inside">
+                <field name="certificate"/>
+                <!-- Add the name field from the ipmc.certificates model -->
+                <field name="certificate_id" string="Certificate Name"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

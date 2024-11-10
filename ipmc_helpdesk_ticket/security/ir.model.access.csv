@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acceess_helpdesk_ticket,acceess_helpdesk_ticket,model_helpdesk_ticket,,1,1,1,1
+acceess_hr_recruitment_degree,acceess_hr_recruitment_degree,model_hr_recruitment_degree,,1,1,1,1
+acceess_ipmc_certificates,acceess_ipmc_certificates,model_ipmc_certificates,,1,1,1,1
+acceess_hr_employee,acceess_hr_employee,model_hr_employee,,1,1,1,1

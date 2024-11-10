@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="helpdesk_ticket_view_form" model="ir.ui.view">
+        <field name="name">helpdesk_ticket form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <field name="description" position="replace">
+                <field name="description" attrs="{'readonly': [('id', '!=', False)]}"/>
+            </field>
+        </field>
+    </record>
+
+    <!--    Inherit the existing search view of helpdesk.ticket-->
+    <record id="view_helpdesk_ticket_search_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter name="filter_ref" string="Reference"
+                        domain="[('ref', '!=', False)]"/>
+
+                <separator/>
+                <filter name="filter_inc_serial_number" string="Inc Serial Number"
+                        domain="[('inc_serial_number', '!=', False)]"/>
+
+                <separator/>
+                <filter name="group_by_ref" string="Reference" context="{'group_by':'ref'}"/>
+                <separator/>
+                <filter name="group_by_inc_serial_number" string="Inc Serial Number" context="{'group_by':'inc_serial_number'}"/>
+
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
